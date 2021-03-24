@@ -8,6 +8,13 @@ const API_KEY =  'AIzaSyB25yedkl2l_1rMronrM2-uryhpV5LqqFo';
 let calendars = [
 	{calendarId: "6sgql291u4h6gd6h1d2hf7aulc@group.calendar.google.com"}
   ];
+let calendarStyle = {
+	tooltip : {
+		opacity : 1
+
+	}
+
+}
 function App() {
   return (
 	<body>
@@ -248,7 +255,7 @@ function App() {
 			</div>
 		<div>
 			<h1>Event Calendar</h1>
-			<Calendar apiKey={API_KEY} calendars={calendars} />
+			<Calendar apiKey={API_KEY} calendars={calendars} styles = {calendarStyle}/>
 		</div>
   <Carousel>
 				<Carousel.Item>
