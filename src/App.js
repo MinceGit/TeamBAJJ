@@ -1,7 +1,13 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
+import Calendar from "@ericz1803/react-google-calendar";
 import 'holderjs';
+
+const API_KEY =  'AIzaSyB25yedkl2l_1rMronrM2-uryhpV5LqqFo';
+let calendars = [
+	{calendarId: "6sgql291u4h6gd6h1d2hf7aulc@group.calendar.google.com"}
+  ];
 function App() {
   return (
 		<body>
@@ -204,7 +210,10 @@ function App() {
 					</div>
 				</div>
 			</div>
-		
+		<div>
+			<h1>Event Calendar</h1>
+			<Calendar apiKey={API_KEY} calendars={calendars} />
+		</div>
 		</main>
 		
 		
