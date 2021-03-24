@@ -2,9 +2,11 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import 'holderjs';
-function App() {
-  return (
-		<body>
+function App() 
+{
+return (
+	<body>
+		{/* -- HEADER BAR -- */}
 		<header>
 			<div class="collapse bg-dark" id="navbarHeader">
 				<div class="container">
@@ -36,8 +38,9 @@ function App() {
 				</div>
 			</div>
 		</header>
-		
+		{/* -- MAIN CONTENT -- */}
 		<main>
+			{/* LANDING PAGE SECTION */}
 			<section class="py-5 text-center container">
 				<div class="row py-lg-5">
 					<div class="col-lg-6 col-md-8 mx-auto">
@@ -50,10 +53,10 @@ function App() {
 					</div>
 				</div>
 			</section>
-		
+
+			{/* OFFICER TITLE CARDS SECTION */} 
 			<div class="album py-5 bg-light">
 				<div class="container">
-		
 					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 						<div class="col">
 							<div class="card shadow-sm">
@@ -103,7 +106,7 @@ function App() {
 								</div>
 							</div>
 						</div>
-		
+
 						<div class="col">
 							<div class="card shadow-sm">
 								<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -152,7 +155,7 @@ function App() {
 								</div>
 							</div>
 						</div>
-		
+
 						<div class="col">
 							<div class="card shadow-sm">
 								<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
@@ -187,7 +190,11 @@ function App() {
 						</div>
 						<div class="col">
 							<div class="card shadow-sm">
-								<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+								<svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+									<title>Placeholder</title>
+									<rect width="100%" height="100%" fill="#173865"/>
+									<text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+								</svg>
 		
 								<div class="card-body">
 									<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -204,53 +211,83 @@ function App() {
 					</div>
 				</div>
 			</div>
-		
+			
+			{/* IMPACTS SECTION */}
+			<div class="container">
+				<h1>Impacts</h1>
+				{/* first row of impact images */}
+				<div class="row">
+					<div class="col-sm">
+						<img src={"ecoLogoNoWords.svg"} width="100%"/>
+						<p>Description 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+							Risus sed vulputate odio ut.</p>
+					</div>
+					<div class="col-sm">
+						<img src={"ecoLogoNoWords.svg"} width="100%"/>
+						<p>Description 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+							Risus sed vulputate odio ut.</p>
+					</div>
+				</div>
+				{/* second row of impact images */}
+				<div class="row">
+					<div class="col-sm">
+						<img src={"ecoLogoNoWords.svg"} width="100%"/>
+						<p>Description 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+							Risus sed vulputate odio ut.</p>
+					</div>
+					<div class="col-sm">
+						<img src={"ecoLogoNoWords.svg"} width="100%"/>
+						<p>Description 4 Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+							Risus sed vulputate odio ut.</p>
+					</div>
+				</div>
+			</div>
+
+			{/* GALLERY SECTION */}
+			<Carousel>
+				<Carousel.Item>
+					<img
+						className="d-block w-100"
+						src="holder.js/800x400?text=First slide&bg=373940"
+						alt="First slide"
+					/>
+					<Carousel.Caption>
+						<h3>First slide label</h3>
+						<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+					</Carousel.Caption>
+				</Carousel.Item>
+				
+				<Carousel.Item>
+					<img
+						className="d-block w-100"
+						src="holder.js/800x400?text=Second slide&bg=282c34"
+						alt="Second slide"
+					/>
+					<Carousel.Caption>
+						<h3>Second slide label</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+					</Carousel.Caption>
+				</Carousel.Item>
+				
+				<Carousel.Item>
+					<img
+						className="d-block w-100"
+						src="holder.js/800x400?text=Third slide&bg=20232a"
+						alt="Third slide"
+					/>
+					<Carousel.Caption>
+						<h3>Third slide label</h3>
+						<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+					</Carousel.Caption>
+				</Carousel.Item>
+			</Carousel>		
+
 		</main>
-		
-		
-		
-		
-		<Carousel>
-			<Carousel.Item>
-				<img
-					className="d-block w-100"
-					src="holder.js/800x400?text=First slide&bg=373940"
-					alt="First slide"
-				/>
-				<Carousel.Caption>
-					<h3>First slide label</h3>
-					<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-				</Carousel.Caption>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					className="d-block w-100"
-					src="holder.js/800x400?text=Second slide&bg=282c34"
-					alt="Second slide"
-				/>
-
-				<Carousel.Caption>
-					<h3>Second slide label</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-				</Carousel.Caption>
-			</Carousel.Item>
-			<Carousel.Item>
-				<img
-					className="d-block w-100"
-					src="holder.js/800x400?text=Third slide&bg=20232a"
-					alt="Third slide"
-				/>
-
-				<Carousel.Caption>
-					<h3>Third slide label</h3>
-					<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-				</Carousel.Caption>
-			</Carousel.Item>
-		</Carousel>		
-
-
-
-
+		{/* -- FOOTER BAR -- */}
 		<footer class="text-muted py-5">
 			<div class="container">
 				<p class="float-end mb-1">
@@ -261,13 +298,9 @@ function App() {
 			</div>
 		</footer>
 		
-		
-				<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-		
-					
-			</body>
+		<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>			
+	</body>
 
   );
 }
-
 export default App;
