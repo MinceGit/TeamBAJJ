@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+.navbar-brand {
+  position: relative;
+  background: url(../src/img/Logo.png);
+  width: 170px;
+  left: 15px;
+  background-size: contain;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
