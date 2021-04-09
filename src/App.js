@@ -21,9 +21,6 @@ let calendarStyle = {
 	}
 }
 
-
-
-
 let officers = ['Alex','2','3','4','5']
 let officerDescriptions = ['Alex is in his fourth year at the University of Florida and is currently working towards his Master\'s in Accounting with a minor in entrepreneurship.','2','3','4','5']
 let officerContact = ['Email: avaridin@ufl.edu ','2','3','4','5']
@@ -120,7 +117,6 @@ function App() {
 			<h1 class="fw-light">Entrepreneurship Collective at the University of Florida</h1>
 			<img src = {stadium} alt = "stadium" width = "auto" height = "auto" />
 		</div>
-
 		</div>
 		</section>
 		</div>
