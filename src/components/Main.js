@@ -1,4 +1,3 @@
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carousel from 'react-bootstrap/Carousel';
 import 'holderjs';
@@ -6,7 +5,7 @@ import './App.css';
 import varidin from './img/varidin.jpeg'
 import stadium from './img/stadium.jpeg'
 import logo from './img/Logo.png'
-
+import {Link} from "react-router-dom"
 
 /* CALENDAR IMPORTS */
 import Calendar from "@ericz1803/react-google-calendar";
@@ -73,7 +72,7 @@ galleryCaptions.forEach((item,index)=>{
 
 
 
-function App() {
+export default function main() {
   return (
 	<body>
     <main>
@@ -131,6 +130,7 @@ function App() {
     
 		<section id="Officers">
 			<div class="album py-5 bg-light">
+			<div class="container">
 			<div class="subheader">
 				<h1>Officers</h1>
 			</div>
@@ -139,6 +139,7 @@ function App() {
 						{officerList}
 					</div>
 				</div>
+			</div>
 			</div>
 		</section>	
 
@@ -157,19 +158,23 @@ function App() {
 		</section>
 
 		<section id="Calendar">
+		<div class="container">
 			<div class="subheader">
 				<h1>Event Calendar</h1>
 				<Calendar apiKey={API_KEY} calendars={calendars} styles = {calendarStyle}/>
 			</div>
+			</div>
 		</section>
 
 		<section id="Gallery">
+		<div class="container">
 			<div class="subheader">
 				<h1>Gallery</h1>
 				</div>
  			<Carousel>
 				{gallery}
 			</Carousel>	
+			</div>
 		</section>	
 
 	</main>
@@ -178,13 +183,12 @@ function App() {
 		<div class="container">
 			<p class="float-end mb-1">
 				<a href="#">Back to top</a>
-      </p>
-    </div>
+      		</p>
+			<Link to="/login">Log in</Link>
+    	</div>
   </footer>
 		
 	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>			
 	</body>
-
   );
 }
-export default App;
