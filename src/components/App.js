@@ -8,6 +8,7 @@ import Login from "./Login"
 import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
+import EmailSignUp from "./EmailSignUp"
 import Main from "./Main"
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/login" component={Login} />
               <Route exact path="/forgot-password" component={ForgotPassword} />
+              <Route exact path ="/email" component={EmailSignUp}/>
               <Route path="/home" component={Main} />
             </Switch>
           </AuthProvider>

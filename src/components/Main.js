@@ -9,6 +9,7 @@ import {Link} from "react-router-dom"
 
 /* CALENDAR IMPORTS */
 import Calendar from "@ericz1803/react-google-calendar";
+import EmailSignUp from './EmailSignUp';
 const API_KEY =  'AIzaSyB25yedkl2l_1rMronrM2-uryhpV5LqqFo';
 let calendars = [
 	{calendarId: "6sgql291u4h6gd6h1d2hf7aulc@group.calendar.google.com"}
@@ -127,7 +128,7 @@ export default function main() {
 				<i className="fa fa-facebook-square" aria-hidden="true"></i>
 			</div>
 		</section>
-    
+
 		<section id="Officers">
 			<div class="album py-5 bg-light">
 			<div class="container">
@@ -185,6 +186,9 @@ export default function main() {
 				<a href="#">Back to top</a>
       		</p>
 			<Link to="/login">Log in</Link>
+			<p>
+				<Link to ="/email">Sign up for our mailing list</Link>
+			</p>
     	</div>
   </footer>
 		
