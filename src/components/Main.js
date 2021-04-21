@@ -134,7 +134,7 @@ export default function Main() {
 											return (
 												<div class="col">
 													<div class="card shadow-sm">
-														<img src={item.Images} alt={item.name} width="auto" height="auto" />
+														<img src={item.url} alt={item.name} width="auto" height="auto" />
 														<div class="card-body">
 															<p class="card-text"> {item.Descriptions}  </p>
 															<div class="d-flex justify-content-between align-items-center">
@@ -167,7 +167,7 @@ export default function Main() {
 								impacts && impacts.map(impacts => {
 									return (
 										<div class="col p-5">
-											<img src={impacts.Image} width="100%" />
+											<img src={impacts.url} width="100%" />
 											<p>{impacts.Caption}</p>
 										</div>
 									)
@@ -197,7 +197,7 @@ export default function Main() {
 								gallery && gallery.map(gallery => {
 									return (
 										<Carousel.Item>
-											<img className="d-block w-100" src={gallery.Image} alt={gallery.Caption} />
+											<img className="d-block w-100" src={gallery.url} alt={gallery.Caption} />
 											<Carousel.Caption>
 												<p>{gallery.Caption}</p>
 											</Carousel.Caption>
