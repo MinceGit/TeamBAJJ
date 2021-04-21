@@ -10,7 +10,10 @@ import { db } from '../firebase.js'
 
 /* CALENDAR IMPORTS */
 import Calendar from "@ericz1803/react-google-calendar";
-const API_KEY = 'AIzaSyB25yedkl2l_1rMronrM2-uryhpV5LqqFo';
+import EmailSignUp from './EmailSignUp';
+const API_KEY =  'AIzaSyB25yedkl2l_1rMronrM2-uryhpV5LqqFo';
+
+
 let calendars = [
 	{ calendarId: "6sgql291u4h6gd6h1d2hf7aulc@group.calendar.google.com" }
 ];
@@ -211,9 +214,28 @@ export default function Main() {
 					</p>
 					<Link to="/login">Log in</Link>
 				</div>
-			</footer>
 
-			<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-		</body>
-	);
+ 			<Carousel>
+				{gallery}
+			</Carousel>	
+			</div>
+		</section>	
+
+	</main>
+	
+  <footer class="text-muted py-5">
+		<div class="container">
+			<p class="float-end mb-1">
+				<a href="#">Back to top</a>
+      		</p>
+			<Link to="/login">Log in</Link>
+			<p>
+				<Link to ="/email">Sign up for our mailing list</Link>
+			</p>
+    	</div>
+  </footer>
+		
+	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>			
+	</body>
+  );
 }
