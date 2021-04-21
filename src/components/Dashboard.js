@@ -47,6 +47,9 @@ export default function Dashboard() {
         <h1 class="subheader">Welcome to the admin dashboard!</h1>
 					<div class="col-lg-6 col-md-8 mx-auto">
 						<p class="lead textmuted">You can upload and update various aspcts of the website through this page! Start by scrolling down to the category you want and entering in a caption/text first and then uploading the image with the "+" button!</p>
+            <div className="w-100 text-center mt-2">
+            Need to add another user? <Link to="/signup">Sign Up</Link>
+          </div>
           <Button variant="link" onClick={handleLogout}>
             Log Out
           </Button>
@@ -66,6 +69,8 @@ export default function Dashboard() {
       </Card>
       <Card>
         <h2 className="text-center mb-4 mt-4">Upload new Officers!</h2>
+        <p class="lead textmuted">Note: use pre-cropped images</p>
+           
         <UploadFormOfficer collection_path='Officers' />
         <ImageGrid collection_path='Officers' />
       </Card>
