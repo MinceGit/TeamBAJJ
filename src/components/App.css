@@ -23,6 +23,12 @@
   color: #61dafb;
 }
 
+.social-media .media-button{
+  margin: auto;
+  width: 33%;
+}
+
+
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -40,4 +46,87 @@ html{
   text-align: center;
   padding-top: 90px;
   padding-bottom: 50px;
+}
+
+.progress-bar{
+  height: 20px;
+  background: navy;
+  margin-top: 20px
+}
+
+/* Form styling*/
+formheader{
+  margin-top: 5;
+}
+
+.uploadForm{
+  margin: 30px auto 10px;
+  text-align: center;
+}
+.uploadForm input{
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.uploadText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.uploadText input{
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  border-radius:10px;
+  display: block;
+}
+
+.uploadForm{
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  margin: 10px auto;
+  line-height: 17px;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 24px;
+}
+.uploadForm:hover{
+  background: var(--primary);
+  color: white;
+}
+.output{
+  height: 60px;
+  font-size: 0.8rem;
+}
+.error{
+  color: var(--error);
+}
+
+
+/* Img Grid*/
+.img-grid{
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 40px;
+}
+.img-wrap{
+  overflow: hidden;
+  height: 0;
+  padding: 50% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
+  opacity: 1;
+}
+.img-wrap img{
+  min-width: 100%;
+  min-height: 100%;
+  max-width: 150%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
