@@ -15,6 +15,7 @@ const UploadForm = (collection_path) => {
         if(selected && types.includes(selected.type)){
             setFile(selected);
             setError('');
+            document.getElementById("inText").value = "";
         }else{
             setFile(null);
             setError('Please select an image file (png or jpeg)');
@@ -25,6 +26,7 @@ const UploadForm = (collection_path) => {
     const handleChange = (e) =>{
         let input = e.target.value;
         setText(input)
+        
     }
 
     return (
@@ -34,7 +36,7 @@ const UploadForm = (collection_path) => {
                 <span>+</span>
             </label>
             <div className = "uploadText">
-                <input type="text" onChange ={handleChange} placeholder="Please enter a caption"/>
+                <input type="text" id ="inText" onChange ={handleChange} placeholder="Please enter a caption"/>
             </div>
             <div className="output">
                 {error && <div className="error">{error}</div>}

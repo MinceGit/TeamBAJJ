@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Carousel,Navbar,Nav} from 'react-bootstrap';
 import 'holderjs';
 import './App.css';
-import stadium from './img/stadium.jpeg'
+import banner from './img/banner.png'
 import logo from './img/Logo.png'
 import { Link } from "react-router-dom"
 import { useState, useEffect } from 'react'
@@ -99,7 +99,7 @@ export default function Main() {
 						<div class="row py-lg-5">
 							<div class="col-lg-8 col-md-8 mx-auto">
 								<h1 class="fw-light"> Entrepreneurship Collective at the University of Florida</h1>
-								<img src={stadium} alt="stadium" width="100%"/>
+								<img src={banner} alt="stadium" width="100%"/>
 							</div>
 						</div>
 					</section>
@@ -111,12 +111,12 @@ export default function Main() {
 						<p class="lead text-muted">The Entrepreneurship Collective aims to serve the broad range of both graduate and undergraduate students at the University of Florida seeking to engage in the topics of entrepreneurship, creativity, and innovation in educative and social capacities by fostering a strong network of like-minded individuals in order to provide value to others in the Entrepreneurship Collective, the Gainesville Community and the world.</p>
 
 						<div className="social-media">
-							<a href="https://www.instagram.com/eco.uf/"><FontAwesomeIcon className="media-button" icon={faFacebook} size="3x" /></a>
-							<a href="https://www.facebook.com/eCoUFL"><FontAwesomeIcon className="media-button" icon={faInstagram} size="3x"/></a>
+							<a href="https://www.facebook.com/eCoUFL"><FontAwesomeIcon className="media-button" icon={faFacebook} size="3x" /></a>
+							<a href="https://www.instagram.com/eco.uf/"><FontAwesomeIcon className="media-button" icon={faInstagram} size="3x"/></a>
 							<a href="https://groupme.com/join_group/45340640/EuNXSbaY"><FontAwesomeIcon className="media-button" icon={faCommentDots} size="3x"/></a>
 						</div>
 
-
+						
 					</div>
 				</section>
 
@@ -199,7 +199,7 @@ export default function Main() {
 										<Carousel.Item>
 											<img className="d-block w-100" src={gallery.url} alt={gallery.Caption} />
 											<Carousel.Caption>
-												<p>{gallery.Caption}</p>
+												<p className="cCaption">{gallery.Caption}</p>
 											</Carousel.Caption>
 										</Carousel.Item>
 									)

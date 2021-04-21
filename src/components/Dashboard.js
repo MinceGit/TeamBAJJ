@@ -28,7 +28,7 @@ export default function Dashboard() {
       <div>
         <Container
           className="d-flex align-items-center justify-content-center"
-          style={{ minHeight: "100vh" }}
+          style={{ minHeight: "50vh" }}
         >
           <div className="w-100" style={{ maxWidth: "400px" }}>
             <Card>
@@ -44,9 +44,14 @@ export default function Dashboard() {
           </div>
         </Container>
         <div className="w-100 text-center mt-2">
+        <h1 class="subheader">Welcome to the admin dashboard!</h1>
+					<div class="col-lg-6 col-md-8 mx-auto">
+						<p class="lead textmuted">You can upload and update various aspcts of the website through this page! Start by scrolling down to the category you want and entering in a caption/text first and then uploading the image with the "+" button!</p>
           <Button variant="link" onClick={handleLogout}>
             Log Out
-        </Button>
+          </Button>
+          <Link to="/home">View Home</Link>
+          </div>
         </div>
       </div>
       <Card>
