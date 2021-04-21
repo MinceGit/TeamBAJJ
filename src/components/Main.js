@@ -64,6 +64,7 @@ export default function Main() {
 		fetchImpacts();
 	}, [])
 	console.log(officers)
+	
 	return (
 		<body>
 			<main>
@@ -204,7 +205,6 @@ export default function Main() {
 						</Carousel>
 					</div>
 				</section>
-
 			</main>
 
 			<footer class="text-muted py-5">
@@ -213,29 +213,13 @@ export default function Main() {
 						<a href="#">Back to top</a>
 					</p>
 					<Link to="/login">Log in</Link>
+					<p>
+						<Link to ="/email">Sign up for our mailing list</Link>
+					</p>
 				</div>
 
- 			<Carousel>
-				{gallery}
-			</Carousel>	
-			</div>
-		</section>	
-
-	</main>
-	
-  <footer class="text-muted py-5">
-		<div class="container">
-			<p class="float-end mb-1">
-				<a href="#">Back to top</a>
-      		</p>
-			<Link to="/login">Log in</Link>
-			<p>
-				<Link to ="/email">Sign up for our mailing list</Link>
-			</p>
-    	</div>
-  </footer>
-		
-	<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>			
-	</body>
-  );
-}
+				<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>		
+			</footer>
+		</body>
+	)
+};
