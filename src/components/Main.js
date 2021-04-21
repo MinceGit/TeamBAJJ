@@ -5,21 +5,21 @@ import './App.css';
 import stadium from './img/stadium.jpeg'
 import logo from './img/Logo.png'
 import { Link } from "react-router-dom"
-
-
+import { useState, useEffect } from 'react'
+import { projectFirestore } from '../firebase.js'
+import EmailSignUp from './EmailSignUp';
 /* CALENDAR IMPORTS */
 import Calendar from "@ericz1803/react-google-calendar";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faCommentAlt, faCommentDollar, faCommentDots } from '@fortawesome/free-solid-svg-icons';
+import { faCommentDots } from '@fortawesome/free-solid-svg-icons';
 const API_KEY = 'AIzaSyB25yedkl2l_1rMronrM2-uryhpV5LqqFo';
 
-import { useState, useEffect } from 'react'
-import { db } from '../firebase.js'
+
 
 /* CALENDAR IMPORTS */
 
-import EmailSignUp from './EmailSignUp';
+
 
 
 let calendars = [
@@ -38,7 +38,7 @@ export default function Main() {
 
 	useEffect(() => {
 		const fetchOfficers = async() => {
-			const response = db.collection('Officers')
+			const response = projectFirestore.collection('Officers')
 			const data = await response.get()
 			data.docs.forEach(item => {
 				setOfficers(officers => [...officers, item.data()])
@@ -51,7 +51,7 @@ export default function Main() {
 
 	useEffect(() => {
 		const fetchGallery = async () => {
-			const response = db.collection('Gallery');
+			const response = projectFirestore.collection('Gallery');
 			const data = await response.get();
 			data.docs.forEach(item => {
 				setGallery(gallery => [...gallery, item.data()])
@@ -64,7 +64,7 @@ export default function Main() {
 
 	useEffect(() => {
 		const fetchImpacts = async () => {
-			const response = db.collection('Impacts');
+			const response = projectFirestore.collection('Impacts');
 			const data = await response.get();
 			data.docs.forEach(item => {
 				setImpacts(impacts => [...impacts, item.data()])
@@ -194,7 +194,6 @@ export default function Main() {
 						</div>
 						<Carousel>
 							{
-
 								gallery && gallery.map(gallery => {
 									return (
 										<Carousel.Item>
@@ -209,9 +208,9 @@ export default function Main() {
 						</Carousel>
 					</div>
 				</section>
-			</main>
-<hr></hr>
 
+			</main>
+			<hr></hr>
 			<footer class="text-muted py-5">
 				<div class="container">
 					<p class="float-end mb-1">
@@ -223,7 +222,6 @@ export default function Main() {
 						<Link to ="/email">Sign up for our mailing list</Link>
 					</p>
 				</div>
-
 				<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>		
 			</footer>
 		</body>

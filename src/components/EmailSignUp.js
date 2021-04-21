@@ -1,6 +1,6 @@
 import React, {useState } from "react"
-import { Form, Button} from "react-bootstrap"
-import {db} from "../firebase.js"
+import { Form, Button, Container} from "react-bootstrap"
+import {projectFirestore} from "../firebase.js"
 
 export default function EmailSignUp(){
 
@@ -13,7 +13,7 @@ export default function EmailSignUp(){
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        db.collection('emails').add({
+        projectFirestore.collection('emails').add({
             name: name,
             email: email,
         })
@@ -30,6 +30,11 @@ export default function EmailSignUp(){
     }; 
 
     return(
+        <Container
+        className="d-flex align-items-center justify-content-center"
+        style={{ minHeight: "100vh" }}
+      >
+        <div className="w-100" style={{ maxWidth: "400px" }}>
         <>
         
         <h2 className="text-center mb-4">Sign Up for Our Mailing List!</h2>
@@ -50,5 +55,7 @@ export default function EmailSignUp(){
         </Form>
         
         </>
+        </div>
+        </Container>
     )
 }
